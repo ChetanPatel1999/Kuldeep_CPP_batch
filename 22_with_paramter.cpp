@@ -21,13 +21,16 @@ void cube(int num)
 void range(int s, int e)
 {
     int i;
-    for (i = s; i <= e; i++)
+    for (i = s; i <= e; i++) // 3
     {
-        cube(i);
+        cube(i); // 3
     }
 }
+
 int main()
 {
+
+    range(1, 5);
 
     add(12, 5);
     add(45, 78);
@@ -39,7 +42,5 @@ int main()
 
     display("ram sharma");
 
-    cube(5);
-    cube(7);
     return 0;
 }
