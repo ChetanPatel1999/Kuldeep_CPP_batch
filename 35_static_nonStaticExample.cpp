@@ -11,7 +11,7 @@ class student
     static string collageName; // static data member
 
 public:
-    void setStudent(string n, int r, float p)
+    void setStudent(string n, int r, float p) // s2
     {
         name = n;
         rno = r;
@@ -45,16 +45,26 @@ public:
         cout << "---------------------------------------\n\n";
     }
 
-    void displayTotalStudent()
+    static void displayTotalStudent() // s3
     {
         cout << "total student : " << totalStudent << endl;
         cout << "---------------------------------------\n\n";
     }
-    void displayTotalResult()
+    static void displayTotalResult()
     {
         cout << "total Pass : " << totalPass << endl;
         cout << "total Fail : " << totalFail << endl;
         cout << "---------------------------------------\n\n";
+    }
+    static void classDetail()
+    {
+        int age = 12;
+        cout << "inside class many methods avialbel" << endl;
+        cout << "setstudent method" << endl;
+        cout << "getResultCard method" << endl;
+        cout << "displayTotalStudent method" << endl;
+        cout << "many more method method" << endl;
+        cout << "---------------------------------" << endl;
     }
 };
 int student::totalStudent = 0;
@@ -74,9 +84,10 @@ int main()
     s2.getResultCard();
     s3.getResultCard();
     s4.getResultCard();
+    student::displayTotalStudent();
+    student::displayTotalResult();
 
-    s1.displayTotalStudent();
-    s1.displayTotalResult();
+    student::classDetail();
 
     return 0;
 }
